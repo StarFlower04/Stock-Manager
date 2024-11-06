@@ -1,0 +1,81 @@
+.order-history {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.order-history::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7); /* Прозорий білий фон для контрасту тексту */
+  z-index: -1; /* Встановлює фон позаду тексту */
+  border-radius: 10px;
+}
+
+.order-history h1 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center; /* Центрування заголовка */
+}
+
+.order-history h2 {
+  font-size: 1.5em;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #333;
+  text-align: left;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  text-align: left;
+  width: 40%;
+  margin-left: 50px;
+}
+
+th {
+  background-color: #f4f4f4;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+.status.processed {
+  color: #FFA500;
+  font-weight: bold;
+}
+
+.status.delivered {
+  color: #127d3d;
+  font-weight: bold;
+}

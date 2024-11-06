@@ -1,0 +1,206 @@
+/* /pages/EditProductPage.css */
+.editProductPage {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.productContainer {
+  display: flex;
+  justify-content: flex-end;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 1200px;
+}
+
+.productImageSection {
+  flex: 1;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+}
+
+.productImageSection img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  margin-left: 100px;
+}
+
+.modalContent img {
+  max-width: 300px;
+  max-height: 300px;
+  width: auto;
+  height: auto;
+  border-radius: 5px; /* Додає трохи закруглені кути, якщо це потрібно */
+  margin-top: 10px;
+}
+
+.productFormSection {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 100px;
+}
+
+.productFormSection h1,
+.productFormSection h2 {
+  text-align: left;
+  margin: 0;
+}
+
+.productFormSection h1 {
+  margin-bottom: 20px;
+}
+
+.productFormSection h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.productFormSection label {
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.productFormSection input,
+.productFormSection textarea {
+  width: 500px;
+  max-width: 500px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.productFormSection textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.changeImageButton {
+  background-color: #ff7c3e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  margin-left: 100px;
+}
+
+.changeImageButton:hover {
+  background-color: #ff604a;
+}
+
+/* Модальне вікно */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalContent {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  min-width: 300px;
+}
+
+/* Стилі для кнопок у модальному вікні */
+.modalButtons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Додає простір між кнопками */
+  margin-top: 20px;
+}
+
+button {
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+/* Кнопки в модальному вікні підтвердження */
+.modalButtons .confirmButton {
+  background-color: #4caf50;
+}
+
+.modalButtons .confirmButton:hover {
+  background-color: #45a049;
+}
+
+.modalButtons .cancelButton {
+  background-color: #f0ad4e; /* Жовтий */
+}
+
+.modalButtons .cancelButton:hover {
+  background-color: #ec971f;
+}
+
+/* Загальні стилі для кнопок */
+.saveButton {
+  background-color: #4caf50; /* Зелений */
+  margin-left: 25px;
+  margin-right: 50px;
+}
+
+.saveButton:hover {
+  background-color: #45a049;
+}
+
+.cancelButton {
+  background-color: #f0ad4e; /* Жовтий */
+}
+
+.cancelButton:hover {
+  background-color: #ec971f;
+}
+
+.deleteProductButton {
+  background-color: #d9534f;
+  margin-left: 50px; /* Червоний */
+}
+
+.deleteProductButton:hover {
+  background-color: #c9302c;
+}
+
+.fileInputContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px; /* Відступ між полем вибору файлу та зображенням */
+}
+
+.fileInputLabel {
+  margin-bottom: 10px; /* Відступ між написом та зображенням */
+  font-weight: bold;
+}
+
+.imagePreview {
+  max-width: 50px;
+  max-height: 50px;
+  border-radius: 5px;
+  margin-top: 10px;
+}

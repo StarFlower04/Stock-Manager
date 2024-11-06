@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap');
+
+.for-users-page {
+  height: auto;
+  min-height: 100vh;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.for-users-page .background-overlay {
+  background-image: url('../assets/images/online-shopping.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: flex-start; /* Вирівнює вміст по верхньому краю */
+  justify-content: flex-end; /* Вирівнює вміст по правому краю */
+  color: #fff;
+  z-index: 1;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.background-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
+.for-users-page .content {
+  position: absolute;
+  top: 20px; /* Відступ зверху */
+  right: 140px; /* Відступ справа, переміщує на 80 пікселів лівіше */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Вирівнює текстовий контент по правому краю */
+  text-align: right; /* Вирівнює текст всередині контейнера по правому краю */
+  max-width: 60%; /* Зменшує ширину на 20%, якщо потрібно більше місця */
+  padding-right: 40px; /* Відступ справа */
+  padding-top: 20px; /* Відступ зверху */
+  padding-bottom: 100px; /* Відступ знизу для кнопки */
+  margin: 0;
+}
+
+.for-users-page h1 {
+  font-family: 'Jost', sans-serif;
+  font-size: 3em;
+  margin: 0;
+}
+
+.for-users-page p {
+  font-family: 'Jost', sans-serif;
+  font-size: 1.5em;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.for-users-page .get-started-button {
+  background-color: #ff7c3e;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-family: 'Jost', sans-serif;
+  transition: background 0.3s;
+  display: inline-block;
+}
+
+.for-users-page .get-started-button:hover {
+  background-color: #ff604a;
+}

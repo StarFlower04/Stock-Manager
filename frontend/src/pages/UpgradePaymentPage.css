@@ -1,0 +1,141 @@
+.payment-page-container {
+    display: flex;
+    justify-content: center; /* Центрує блок по горизонталі */
+    align-items: center; /* Центрує блок по вертикалі */
+    min-height: 100vh;
+    position: relative;
+    background-image: url('/src/assets/images/waves-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .payment-page-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Затемнення фонової картинки */
+    z-index: 1;
+  }
+
+  .payment-page {
+    max-width: 600px; /* Збільшення ширини контейнера */
+    width: 100%;
+    padding: 40px; /* Збільшення відступів */
+    margin-top: -70px;
+    background-color: rgba(255, 255, 255, 0.8); /* Напівпрозорий білий фон */
+    border-radius: 15px; /* Збільшення радіусу закруглення */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Збільшення тіні */
+    z-index: 2;
+    position: relative;
+  }
+  
+  .payment-page h2 {
+    color: #fff;
+    margin-bottom: 20px;
+  }
+
+  .section h3 {
+    color: #fff;
+    text-align: left; /* Вирівнювання заголовків по лівому краю */
+    margin-bottom: 5px; /* Відступ між заголовком та вмістом секції */
+  }
+  
+  
+  .section {
+    margin-bottom: 5px; /* Відступ між секціями */
+  }
+  
+  .amount-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .amount-section label {
+    color: #fff;
+    margin-right: 0px; /* Відступ між написом та селектором */
+  }
+  
+  .payment-page input {
+    width: 100%;
+    padding: 15px; /* Збільшення відступів всередині полів */
+    margin-bottom: 10px; /* Збільшення відступу знизу */
+    border: 1px solid #ddd; /* Додавання бордюра */
+    border-radius: 5px; /* Розділення країв */
+    background-color: #fff; /* Білий фон для полів вводу */
+    box-sizing: border-box; /* Включення бордюра в загальну ширину та висоту */
+  }
+
+  .payment-page select {
+    width: 150px; /* Задайте потрібну ширину у пікселях */
+    padding: 10px; /* Можна змінити відступи всередині селектора */
+    margin-bottom: 15px; /* Відступ знизу */
+    border: 1px solid #ddd; /* Бордер для селектора */
+    border-radius: 5px; /* Закруглення країв */
+    background-color: #fff; /* Білий фон для селектора */
+    box-sizing: border-box; /* Включення бордюра в загальну ширину та висоту */
+  }  
+  
+  .payment-page input:focus,
+  .payment-page select:focus {
+    border-color: #18ffff; /* Зміна кольору бордюра при фокусі */
+    outline: none; /* Видалення стандартного обведення */
+  }
+  
+  .payment-page .modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px; /* Відстань між кнопками */
+    margin-top: 20px;
+  }
+  
+  .payment-page button {
+    padding: 12px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007676;
+    color: #fff;
+    flex: 1; /* Додає можливість кнопкам розтягуватись */
+  }
+  
+  .payment-page button:hover {
+    background-color: #005555;
+  }
+  
+  .confirm-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+  }
+  
+  .error-message {
+    color: red; /* Змінити на потрібний колір */
+    margin-top: 5px; /* Відступ зверху для розділення */
+    font-size: 0.9em; /* Зменшення розміру шрифту */
+    text-align: center; /* Центрування тексту */
+    margin-bottom: 15px;
+    margin-top: 10x;
+  }  
+
+.date-cvv-row {
+    display: flex;
+    flex-direction: row;
+    gap: 10px; /* Проміжок між полями */
+  }
+  
+  .date-cvv-row input,
+  .date-cvv-row .react-datepicker-wrapper {
+    flex: 1; /* Зробити ширину кожного поля однаковою */
+  }  

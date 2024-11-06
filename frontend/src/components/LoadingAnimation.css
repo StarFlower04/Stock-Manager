@@ -1,0 +1,75 @@
+/* src/components/LoadingAnimation.css */
+body {
+  background: #333;
+  text-align: center;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  color: rgba(255, 255, 255, .8);
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loader {
+  position: relative;
+  width: 3em; 
+  height: 3em; 
+}
+
+.loader:before,
+.loader:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.loader:before {
+  width: 3em; 
+  height: 3em; 
+  border: 0.2em solid currentcolor; 
+  border-radius: 50%;
+  animation: loader-1 1.15s infinite -0.3s;
+}
+
+.loader:after {
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border: 0.2em solid currentcolor; 
+  border-radius: 50%;
+  transform: translate(-0.4em); 
+  animation: loader-2 4.6s infinite steps(1);
+}
+
+@keyframes loader-1 {
+  to {
+    transform: rotateX(180deg);
+  }
+}
+
+@keyframes loader-2 {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    box-shadow: 0.4em 0 0 currentcolor; 
+  }
+  75% {
+    box-shadow: 0.4em 0 0 currentcolor, 0.8em 0 0 currentcolor; 
+  }
+}

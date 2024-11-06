@@ -1,0 +1,161 @@
+.addProductPage {
+    display: flex;
+    padding: 20px;
+    width: 80%;
+}
+
+.addProductContainer {
+    position: relative;
+    left: 200px;
+    display: flex;
+    justify-content: flex-start;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    width: calc(100% - 20px);
+}
+
+.addProductFormSection {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.addProductFormSection h1,
+.addProductFormSection h2 {
+    margin-left: 120px;
+    text-align: left;
+    margin: 0;
+}
+
+.addProductFormSection h1 {
+    margin-left: 120px;
+    margin-bottom: 20px;
+}
+
+.addProductFormSection h2 {
+    margin-left: 120px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.addProductFormSection label {
+    margin-left: 120px;
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.addProductFormSection input,
+.addProductFormSection textarea {
+    width: 350%;
+    max-width: 1000px;
+    margin-left: 120px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.addProductFormSection textarea {
+    margin-left: 120px;
+    height: 100px;
+    resize: vertical;
+}
+
+.addProductModalButtons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.addProductModalButtons button {
+    margin-left: 300px;
+    background-color: #ff7c3e;
+    color: white;
+    border: none;
+    padding: 10px 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s;
+}
+
+.addProductModalButtons button:hover {
+    background-color: #ff604a;
+}
+
+.addProductErrorMessage {
+    color: red;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* AddProductPage.css */
+
+.addProductPage .modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.addProductPage .modalContent {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    z-index: 1001;
+}
+
+/* AddProductPage.css */
+
+.addProductPage .modalButtons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; /* Center the buttons */
+}
+
+.addProductPage .modalButtons button {
+    background-color: #ff7c3e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+    margin: 0 5px; /* Reduced margin between buttons */
+}
+
+.addProductPage .modalButtons button:hover {
+    background-color: #ff604a;
+}
+
+.required {
+    color: red;
+    margin-left: 5px;
+  }
+  
+  .addProductErrorMessage {
+    background-color: #f8d7da; /* Light red background */
+    color: #721c24; /* Dark red text */
+    padding: 10px; /* Padding around the message */
+    border: 1px solid #f5c6cb; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 20px; /* Space below the message */
+    position: absolute; /* Fixed position */
+    top: 50px; /* Adjust position from the top */
+    left: 20px; /* Adjust position from the left */
+    width: calc(100% - 40px); /* Full width minus padding */
+    z-index: 100; /* Ensure it stays above other elements */
+  }  

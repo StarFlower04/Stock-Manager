@@ -1,0 +1,260 @@
+.profile-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: url('../assets/images/blurred-background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+}
+
+.profile-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.profile-container {
+  display: flex;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 900px;
+  height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  z-index: 2;
+  margin-right: 0%; /* Зменшити зміщення вліво */
+  margin-bottom: 4.5%; /* Додати зміщення вверх */
+  align-items: flex-start;
+}
+
+.avatar-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 40px; /* Відступ від аватару до інформації */
+}
+
+.avatar-container {
+  width: 250px; /* Встановити ширину аватара */
+  height: 250px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.user-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
+.change-avatar-button {
+  font-size: 1.2rem; /* Збільшення розміру шрифту */
+  padding: 10px 20px; /* Збільшення внутрішніх відступів */
+  background-color: #007676;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.change-avatar-button:hover {
+  background-color: #005555; /* Зміна кольору при наведенні */
+}
+
+
+.profile-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left; /* Вирівнювання інформації по вертикалі */
+  margin-top: 25px;
+  margin-left: 80px;
+}
+
+.profile-info div {
+  margin-bottom: 30px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.profile-info strong {
+  color: #007676;
+}
+
+.crop-container {
+  position: relative;
+  width: 100%;
+  height: 300px; /* Висота контейнера для обрізки */
+  background-color: #333;
+}
+
+.error-message {
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 10px;
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  font-size: 1.5rem;
+}
+
+.avatar-placeholder {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+/* Modal styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  z-index: 1001;
+}
+
+.avatar-preview {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 20px 0;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Confirm dialog styles */
+
+.confirm-update,
+.confirm-cancel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.confirm-update-content,
+.confirm-cancel-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  z-index: 1001;
+}
+
+.confirm-update-content button,
+.confirm-cancel-content button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background: #007676;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.confirm-update-content button:hover,
+.confirm-cancel-content button:hover {
+  background: #005f5f;
+}
+
+.promo-block {
+  margin-top: 40px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  text-align: left; /* Align text to the left for better spacing */
+  width: 520px; /* Width can be adjusted as needed */
+  margin-top: 130px;
+  margin-left: -70px; /* Adjust left margin to shift the block */
+  margin-bottom: 0; /* Remove extra bottom margin */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.promo-text {
+  flex: 1; 
+  margin-right: 20px; /* Space between text and button */
+  padding-top: 18px; /* Adjust this value to move text down */
+}
+
+.promo-block h3 {
+  margin: 0 0 10px 0; /* Remove top margin and only keep bottom margin */
+  font-size: 18px;
+  color: #333;
+}
+
+.promo-block p {
+  font-size: 16px;
+  color: #555;
+  margin: 0; /* Ensure no extra margin */
+}
+
+.upgrade-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 17px;
+}
+
+.upgrade-button:hover {
+  background-color: #0056b3;
+}

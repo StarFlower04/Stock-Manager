@@ -1,0 +1,125 @@
+/* src/pages/WarehouseManagementPage.css */
+.warehouse-management-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  background: linear-gradient(135deg, #f5f5f5, #ffffff);
+  min-height: 100vh; /* Ensure the page height is at least the screen height */
+  box-sizing: border-box; /* Includes padding in the total height */
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.product-card,
+.add-product-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover,
+.add-product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.product-card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.product-card-title {
+  font-size: 1.5em;
+  margin: 0;
+  color: #ff7c3e;
+}
+
+.product-card-description {
+  margin: 10px 0;
+  color: #777;
+  flex-grow: 1;
+}
+
+.product-card-supplier,
+.product-card-warehouse,
+.product-card-quantity,
+.product-card-price {
+  margin: 5px 0;
+  font-size: 0.9em;
+  color: #333;
+}
+
+.product-card-quantity {
+  font-weight: bold;
+}
+
+.product-card-button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #ff7c3e;
+  color: #fff;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.product-card-button:hover {
+  background: #ff604a;
+}
+
+.error-message {
+  color: red;
+  font-size: 1.2em;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Оновлені стилі для додавання довжини блоку "Add New Product" */
+.add-product-card {
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 550px; /* Збільшена висота блоку */
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.plus-sign {
+  font-size: 50px;
+  color: #ff7c3e;
+}
+
+.add-product-card p {
+  font-size: 18px;
+  color: #333;
+  margin-top: 10px;
+}

@@ -1,0 +1,99 @@
+/* src/App.css */
+.app {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background: linear-gradient(90deg, #f75c64, #ff604a, #fc6c37, #ff7c3e, #fc8416, #ef9a03, #55603e, #003750, #364471, #54518a, #924b87, #be4676, #c0508a, #bf4777, #e25269, #cd4a6c, #ff5f5d, #ec5662, #f75c64);  
+  background-size: 400% 400%;
+  animation: GradientAnimation 65s linear infinite;
+  color: #fff;
+  padding: 10px 0;
+}
+
+@keyframes GradientAnimation {
+  0% { background-position: 100% 50%; }
+  25% { background-position: 75% 50%; }
+  50% { background-position: 50% 50%; }
+  75% { background-position: 25% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+
+nav ul .brand {
+  margin-right: auto; 
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+}
+
+.brand-icon {
+  margin-right: 10px;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  font-size: 1.2em;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+  background: #fff;
+  color: #000000;
+}
+
+.right-nav {
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+  margin-right: 35px;
+}
+
+nav ul .right-nav li a, nav ul .right-nav li button {
+  font-size: 1em;
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
+}
+
+nav ul .right-nav li button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+nav ul .right-nav li a:hover, nav ul .right-nav li button:hover {
+  background: #fff;
+  color: #000000;
+}
+
+nav ul .right-nav li button {
+  margin-top: 1px; 
+
+}
+
+.active-link {
+  font-size: 1.3em;
+  text-decoration: underline;
+  text-underline-offset: 5px; 
+  font-weight: bold;
+}

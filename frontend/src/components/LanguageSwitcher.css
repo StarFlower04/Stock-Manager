@@ -1,0 +1,16 @@
+.language-switcher {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto; /* Вирівнювання перемикача праворуч */
+  }
+  
+  .flag-icon {
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  .flag-icon:hover {
+    opacity: 0.8;
+  }  
